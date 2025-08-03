@@ -173,7 +173,7 @@ const payment = await nhonga.createPayment({
 ## Suporte
 
 Para suporte técnico, entre em contato:
-- Email: suporte@nhonga.net
+- Email: support@nhonga.net
 - Documentação: https://nhonga.net/api-docs
 
 ## Licença
