@@ -1,0 +1,29 @@
+{
+  "name": "nhonga-api",
+  "version": "1.0.0",
+  "description": "Biblioteca Node.js para integração com a API Nhonga.net",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["nhonga", "payment", "api", "mozambique", "mpesa", "emola"],
+  "author": "Daniel Mucamba",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/jest": "^29.0.0",
+    "jest": "^29.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0"
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ]
+}
+
