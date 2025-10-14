@@ -16,7 +16,7 @@ import { NhongaAPI } from 'nhonga-api';
 const nhonga = new NhongaAPI({
   apiKey: 'SUA_CHAVE_API',
   secretKey: 'SUA_CHAVE_SECRETA', // Opcional, necessária para webhooks
-  baseUrl: 'https://nhonga.net/api/' // Opcional, padrão já configurado
+  baseUrl: 'https://vendorapay.com/api/' // Opcional, padrão já configurado
 });
 ```
 

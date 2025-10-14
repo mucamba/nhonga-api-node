@@ -10,7 +10,7 @@ class NhongaAPI {
     constructor(config) {
         this.secretKey = config.secretKey;
         this.client = axios_1.default.create({
-            baseURL: config.baseUrl || 'https://nhonga.net/api/',
+            baseURL: config.baseUrl || 'https://nhonga.net/api',
             headers: {
                 'apiKey': config.apiKey,
                 'Content-Type': 'application/json'

@@ -19,7 +19,7 @@ export class NhongaAPI {
     this.secretKey = config.secretKey;
     
     this.client = axios.create({
-      baseURL: config.baseUrl || 'https://nhonga.net/api',
+      baseURL: config.baseUrl || 'https://vendorapay.com/api',
       headers: {
         'apiKey': config.apiKey,
         'Content-Type': 'application/json'
