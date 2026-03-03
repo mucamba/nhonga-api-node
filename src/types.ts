@@ -10,7 +10,7 @@ export interface CreatePaymentRequest {
   callbackUrl?: string;
   returnUrl?: string;
   currency?: 'MZN' | 'USD';
-  enviroment?: 'prod' | 'dev';
+  environment?: 'prod' | 'dev';
 }
 
 export interface CreatePaymentResponse {
