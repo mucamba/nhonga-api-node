@@ -14,6 +14,33 @@ import {
 export class NhongaAPI {
   private client: AxiosInstance;
   private secretKey?: string;
+  
+  /**
+   * Constant-time string comparison to prevent timing attacks
+   */
+  private constantTimeCompare(a: string, b: string): boolean {
+    if (typeof a !== 'string' || typeof b !== 'string') {
+      return false;
+    }
+    
+    const aLength = a.length;
+    const bLength = b.length;
+    
+    // Compare lengths but continue to avoid timing leak
+    let result = aLength === bLength;
+    
+    // Compare all characters without early exit
+    const maxLength = Math.max(aLength, bLength);
+    for (let i = 0; i < maxLength; i++) {
+      const aChar = i < aLength ? a.charCodeAt(i) : 0;
+      const bChar = i < bLength ? b.charCodeAt(i) : 0;
+      if (aChar !== bChar) {
+        result = false;
+      }
+    }
+    
+    return result;
+  }
 
   constructor(config: NhongaConfig) {
     this.secretKey = config.secretKey;
@@ -97,7 +124,7 @@ export class NhongaAPI {
     if (!this.secretKey) {
       throw new NhongaError('Secret key not configured for webhook validation');
     }
-    return this.secretKey === receivedSecretKey;
+    return this.constantTimeCompare(this.secretKey, receivedSecretKey);
   }
 
   /**
