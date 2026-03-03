@@ -15,7 +15,7 @@ async function exemploCreatePayment() {
       callbackUrl: 'https://seusite.com/webhook',
       returnUrl: 'https://seusite.com/obrigado',
       currency: 'MZN',
-      enviroment: 'dev' // Use 'prod' para produção
+      environment: 'dev' // Use 'prod' para produção
     });
 
     if (payment.success) {
