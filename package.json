@@ -12,6 +12,24 @@
   "keywords": ["nhonga", "payment", "api", "mozambique", "mpesa", "emola"],
   "author": "Daniel Mucamba",
   "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danielmucamba/nhonga-api.git"
+  },
+  "bugs": {
+    "url": "https://github.com/danielmucamba/nhonga-api/issues"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    }
+  },
+
   "devDependencies": {
     "@types/node": "^20.0.0",
     "@types/jest": "^29.0.0",
